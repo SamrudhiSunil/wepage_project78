@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Class 78 Project</title>
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+            <h1>
+                My Family Book
+            </h1>
+            <img src="https://languageduringmealtime.com/wp-content/uploads/2014/11/The-family-book-e1417314391978.jpg" style="width: 30%;" id="family_member_image">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+        </center> 
+    </body>
+    <script>
+        var images = ["https://languageduringmealtime.com/wp-content/uploads/2014/11/The-family-book-e1417314391978.jpg"
+            ,"https://st.depositphotos.com/1724125/2693/v/950/depositphotos_26930203-stock-illustration-cartoon-dad.jpg",
+    "https://www.ubuy.co.in/productimg/?image=aHR0cHM6Ly9pbWFnZXMtbmEuc3NsLWltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9JLzYxYXA2NnlrUG9MLl9TUzQwMF8uanBn.jpg",
+"https://previews.123rf.com/images/yupiramos/yupiramos1803/yupiramos180310722/96942213-happy-cute-teen-girl-daughter-cartoon-vector-illustration.jpg",
+"https://image.shutterstock.com/image-illustration/cartoon-old-woman-cane-260nw-1376524529.jpg"];
+
+        var names = ["family book","dad","mom","daughter","granny"];
+
+        var i = 0;
+
+        function update()
+        {
+            i++;
+            var no_of_fly_mem = 4
+            if (i > no_of_fly_mem)
+            {
+                i = 0;
+            }
+            var updateImage = images[i];
+            var updateName = names[i];
+
+            document.getElementById("family_member_image").src = updateImage;
+            document.getElementById("family_member_name").innerHTML = updateName;
+        }
+    </script>
+</html>
